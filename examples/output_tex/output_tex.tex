@@ -1,0 +1,137 @@
+\documentclass[10pt]{book}
+
+%\usepackage[utf8]{inputenc}  Ignorado quando compilado com LuAtEx que já é baseada nessa codificacao
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage[default-range=1-5]{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[paperwidth=169.7mm, paperheight=244.2mm, left= 2cm, right = 2cm, top = 1.2cm, bottom = 2cm,  includemp = false, includefoot = false, includehead = true,  headheight = .5cm, headsep = .2 cm,twoside = false, twocolumn = false]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\slshape\sffamily\rightmark}
+\fancyhead[C]{\sffamily}
+\fancyhead[R]{{\sffamily{\large\color{darkgray}\bfseries\thepage}\;} \begin{tikzpicture}
+  \draw [darkgray, line width=6]
+(0,0) -- (.2,0);
+\end{tikzpicture}{\;\footnotesize\slshape\sffamily\leftmark}}
+
+\renewcommand{\headrulewidth}{.2pt}
+
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divo}{div}
+
+\captionsetup{labelformat = simple, labelsep = quad, justification = justified, singlelinecheck = false, labelfont = {footnotesize, sf, bf, color = darkgray}, textfont = {sf, footnotesize,  color = darkgray}}
+
+\setromanfont{Latin Modern Roman}
+\setsansfont{Arial}
+
+\titleformat{\chapter}[display]
+{} % format
+{
+\begin{tikzpicture}[remember picture, overlay]
+  \node [yshift=-.19\paperheight] at (current page.north west) 
+  {\begin{tikzpicture}[remember picture, overlay]
+    \path[fill=lightgray] (0,0) rectangle (.3\paperwidth,.19\paperheight);
+    \node [anchor = east, xshift = .28\paperwidth, yshift = .045\paperheight] {\fontsize{0.1\paperheight}{0pt}\sffamily \fontseries{b}\color{white} \selectfont\thechapter};
+  \end{tikzpicture}};
+\end{tikzpicture}
+} % label
+{0.1cm} % sep
+{
+\thispagestyle{empty}
+\vspace{-0.1cm}\flushright\Huge\sffamily \color{darkgray}\fontseries{b}\selectfont\addfontfeature{LetterSpace=2}
+} % before text
+[\vspace{.8cm}]
+
+\titleformat{\section}[hang]
+{\large\sffamily\color{darkgray}\fontseries{b}\selectfont}
+{\thesection\quad}
+{0cm}
+{\MakeUppercase}
+[\vspace{-0.2cm}]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Título do Texto}
+\author{}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\chapter{Título 1}
+
+\section{Subtítulo 1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec tincidunt turpis, nec pharetra libero. Sed ultricies tortor vitae lectus \textit{consectetur}, in maximus mi aliquam. Sed pellentesque imperdiet odio id mattis. Ut odio arcu, porttitor nec \textbf{mollis} sit amet, ornare quis metus \#ta pago. entao aqui
+
+\#Titulo, nao nesse tipo de caso
+
+\begin{equation*}
+\oint_\gamma \mathbf{E}\cdot d\boldsymbol{\ell} = -\frac{d}{dt}\Phi_B
+\end{equation*}
+
+Nunc et sem eget \textbf{\textit{arcu}} rutrum ornare et id lorem. In risus ante, ullamcorper nec odio ac, auctor pretium nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut justo in leo tristique vehicula. 
+
+\begin{verbatim}
+def some_python(code):
+    \# just
+    for n in noobs:
+        print(n)
+    return noobs.join()
+\end{verbatim}
+
+Integer $\nabla \to \oint$ tincidunt aliquet dolor a vulputate. In venenatis risus est. Morbi volutpat dignissim euismod. Vestibulum nisi augue, porttitor a cursus eget, interdum id eros. Sed condimentum \texttt{sem ante}, quis ultricies nunc scelerisque at. 
+
+\begin{itemize}
+\item Nam rutrum varius erat vitae sodales.
+Aqui ainda é o primeiro item.
+	\begin{itemize}
+	\item Aqui temos um belo subitem
+	\item Ou até mesmo outro
+	que continua nessa quebra
+	\end{itemize}
+\item Etiam accumsan tempor dolor, eget maximus orci convallis ut. Phasellus lobortis sem nec erat dignissim sodales. 
+\item Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+	\begin{itemize}
+	\item Aliquam ultrices felis a nulla iaculis, a aliquet velit cursus. Cras rhoncus rutrum neque. Pellentesque viverra ultricies metus eget luctus.
+	\end{itemize}
+\end{itemize}
+
+\section{Subtítulo 2}
+
+\begin{quotation}
+ Nullam ut justo in leo tristique vehicula. Integer tincidunt aliquet dolor a vulputate. In venenatis risus est. Morbi volutpat dignissim euismod. 
+Aqui continua sendo citacao, Vestibulum nisi augue, porttitor a cursus eget, interdum id eros. 
+\end{quotation}
+
+Sed condimentum sem ante, quis ultricies nunc scelerisque at. Proin nec sapien mattis sapien faucibus pellentesque at ac purus. Aenean nibh leo, faucibus at nibh aliquet, lobortis sodales nisi\**. Nulla porttitor \#blandit tortor quis tincidunt. \textbf{Incluindo imagem não alinhada.}
+
+\includegraphics[width = .6\textwidth]{imgs/jar.png}
+
+\begin{verbatim}
+Morbi pretium eros 
+    sed congue gravida
+        Curabitur pharetra 
+    nulla id semper 
+interdum
+\end{verbatim}
+
+<p align = center>
+\includegraphics[width = .6\textwidth]{imgs/jar.png}
+</p>
+
+\end{document}

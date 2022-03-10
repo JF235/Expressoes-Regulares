@@ -1,0 +1,78 @@
+\documentclass[10pt]{book}
+
+%\usepackage[utf8]{inputenc}  Ignorado quando compilado com LuAtEx que já é baseada nessa codificacao
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[T1]{fontenc}
+\usepackage[default-range=1-5]{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[paperwidth=169.7mm, paperheight=244.2mm, left= 2cm, right = 2cm, top = 1.2cm, bottom = 2cm,  includemp = false, includefoot = false, includehead = true,  headheight = .5cm, headsep = .2 cm,twoside = false, twocolumn = false]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm} 
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{fontspec}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\slshape\sffamily\rightmark}
+\fancyhead[C]{\sffamily}
+\fancyhead[R]{{\sffamily{\large\color{darkgray}\bfseries\thepage}\;} \begin{tikzpicture}
+  \draw [darkgray, line width=6]
+(0,0) -- (.2,0);
+\end{tikzpicture}{\;\footnotesize\slshape\sffamily\leftmark}}
+
+\renewcommand{\headrulewidth}{.2pt}
+
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divo}{div}
+
+\captionsetup{labelformat = simple, labelsep = quad, justification = justified, singlelinecheck = false, labelfont = {footnotesize, sf, bf, color = darkgray}, textfont = {sf, footnotesize,  color = darkgray}}
+
+\setromanfont{lmroman10}[
+    Path=./lmroman10/,
+    Extension = .otf,
+    UprightFont=*-regular,
+    BoldFont=*-bold,
+    ItalicFont=*-italic,
+    BoldItalicFont=*-boldItalic
+    ]
+\setsansfont{Arial}
+
+\titleformat{\chapter}[display]
+{} % format
+{
+\begin{tikzpicture}[remember picture, overlay]
+  \node [yshift=-.19\paperheight] at (current page.north west) 
+  {\begin{tikzpicture}[remember picture, overlay]
+    \path[fill=lightgray] (0,0) rectangle (.3\paperwidth,.19\paperheight);
+    \node [anchor = east, xshift = .28\paperwidth, yshift = .045\paperheight] {\fontsize{0.1\paperheight}{0pt}\sffamily \fontseries{b}\color{white} \selectfont\thechapter};
+  \end{tikzpicture}};
+\end{tikzpicture}
+} % label
+{0.1cm} % sep
+{
+\thispagestyle{empty}
+\vspace{-0.1cm}\flushright\Huge\sffamily \color{darkgray}\fontseries{b}\selectfont\addfontfeature{LetterSpace=2}
+} % before text
+[\vspace{.8cm}]
+
+\titleformat{\section}[hang]
+{\large\sffamily\color{darkgray}\fontseries{b}\selectfont}
+{\thesection\quad}
+{0cm}
+{\MakeUppercase}
+[\vspace{-0.2cm}]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Título do Texto}
+\author{}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

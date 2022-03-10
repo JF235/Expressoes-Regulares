@@ -201,6 +201,8 @@ Podemos ainda usar grupos para coletar informações diretamente do que foi comp
 
 As mesmas colocações funcionam para se houver um padrão antes `(?<=...)` e `(?<!...)`
 
+* Opções de lookbehind e lookahead precisam de padrões com tamanhos fixos.
+
 ## Flags
 Alguns exemplos...
 

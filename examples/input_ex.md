@@ -20,14 +20,19 @@ def some_python(code):
 
 Integer $\nabla \to \oint$ tincidunt aliquet dolor a vulputate. In venenatis risus est. Morbi volutpat dignissim euismod. Vestibulum nisi augue, porttitor a cursus eget, interdum id eros. Sed condimentum `sem ante`, quis ultricies nunc scelerisque at. 
 
-* Nam rutrum varius erat vitae sodales. 
+* Nam rutrum varius erat vitae sodales.
+Aqui ainda é o primeiro item.
+	* Aqui temos um belo subitem
+	* Ou até mesmo outro
+	que continua nessa quebra
 * Etiam accumsan tempor dolor, eget maximus orci convallis ut. Phasellus lobortis sem nec erat dignissim sodales. 
 * Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-    * Aliquam ultrices felis a nulla iaculis, a aliquet velit cursus. Cras rhoncus rutrum neque. Pellentesque viverra ultricies metus eget luctus.
+	* Aliquam ultrices felis a nulla iaculis, a aliquet velit cursus. Cras rhoncus rutrum neque. Pellentesque viverra ultricies metus eget luctus.
 
 ## Subtítulo 2
 
-> Nullam ut justo in leo tristique vehicula. Integer tincidunt aliquet dolor a vulputate. In venenatis risus est. Morbi volutpat dignissim euismod. Vestibulum nisi augue, porttitor a cursus eget, interdum id eros. 
+> Nullam ut justo in leo tristique vehicula. Integer tincidunt aliquet dolor a vulputate. In venenatis risus est. Morbi volutpat dignissim euismod. 
+Aqui continua sendo citacao, Vestibulum nisi augue, porttitor a cursus eget, interdum id eros. 
 
 Sed condimentum sem ante, quis ultricies nunc scelerisque at. Proin nec sapien mattis sapien faucibus pellentesque at ac purus. Aenean nibh leo, faucibus at nibh aliquet, lobortis sodales nisi\**. Nulla porttitor #blandit tortor quis tincidunt. **Incluindo imagem não alinhada.**
 
